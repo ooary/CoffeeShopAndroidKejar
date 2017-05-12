@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.koalasdev.coffeshop">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <!--
+          -
+          SETIAP ACTIVITY YANG MEMILIKI INTENT FILTER LAUNCHER DAN MAIN
+          MAKA ACTIVITY TERSEBUT YANG AKAN JALAN PERTAMA PADA SAAT APLIKASI
+          DI JALANKAN
+        -->
+        <activity android:name=".HomeActivity"/>
+
+
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".TopMenuActivity" />
+        <!--
+            http://stackoverflow.com/questions/39604889/how-to-fix-you-need-to-use-a-theme-appcompat-theme-or-descendant-with-this-a
+        -->
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/AppFullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
